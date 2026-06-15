@@ -189,7 +189,7 @@ http://localhost:8080
 **Vivek D**
 
 - GitHub: https://github.com/vivekd2181-beep
-- LinkedIn: Add Your LinkedIn Profile
+
 
 ---
 
