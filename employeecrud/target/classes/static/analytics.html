@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Analytics Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+    padding:40px;
+    overflow-x:hidden;
+}
+
+.dashboard-title{
+    font-size:70px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.dashboard-sub{
+    color:#bdbdbd;
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+.analytics-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:28px;
+    padding:30px;
+    backdrop-filter:blur(20px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(0,255,120,0.18);
+}
+
+.card h2{
+    margin-bottom:25px;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.stat-box h1{
+    font-size:50px;
+    color:#7dff8c;
+}
+
+canvas{
+    margin-top:20px;
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:50px;
+    padding:16px 30px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#ff512f,#ff0844);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 class="dashboard-title">
+Analytics Dashboard
+</h1>
+
+<p class="dashboard-sub">
+Modern workforce performance analysis and employee growth insights.
+</p>
+
+<div class="analytics-grid">
+
+    <!-- PERFORMANCE -->
+
+    <div class="card">
+
+        <h2>Employee Performance</h2>
+
+        <canvas id="performanceChart"></canvas>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <p>Average</p>
+                <h1>98%</h1>
+            </div>
+
+            <div class="stat-box">
+                <p>Growth</p>
+                <h1>+24%</h1>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DEPARTMENT -->
+
+    <div class="card">
+
+        <h2>Department Analysis</h2>
+
+        <canvas id="departmentChart"></canvas>
+
+    </div>
+
+    <!-- WORK HOURS -->
+
+    <div class="card">
+
+        <h2>Work Hour Statistics</h2>
+
+        <canvas id="workChart"></canvas>
+
+    </div>
+
+    <!-- SALARY -->
+
+    <div class="card">
+
+        <h2>Salary Distribution</h2>
+
+        <canvas id="salaryChart"></canvas>
+
+    </div>
+
+</div>
+
+<a href="index.html" class="back-btn">
+← Back Home
+</a>
+
+<script>
+
+new Chart(document.getElementById('performanceChart'), {
+
+    type:'line',
+
+    data:{
+        labels:['Mon','Tue','Wed','Thu','Fri','Sat'],
+
+        datasets:[{
+
+            label:'Performance',
+
+            data:[92,95,97,96,98,99],
+
+            borderColor:'#00ff88',
+
+            backgroundColor:'rgba(0,255,120,0.15)',
+
+            fill:true,
+
+            tension:0.4
+
+        }]
+    }
+
+});
+
+new Chart(document.getElementById('departmentChart'), {
+
+    type:'doughnut',
+
+    data:{
+        labels:[
+            'Developer',
+            'HR',
+            'Testing',
+            'Finance',
+            'UI/UX'
+        ],
+
+        datasets:[{
+
+            data:[40,15,20,10,15],
+
+            backgroundColor:[
+                '#00ff88',
+                '#ff4d4d',
+                '#ffaa00',
+                '#00ccff',
+                '#ff66ff'
+            ]
+
+        }]
+    }
+
+});
+
+new Chart(document.getElementById('workChart'), {
+
+    type:'bar',
+
+    data:{
+        labels:['6h','7h','8h','9h','10h'],
+
+        datasets:[{
+
+            label:'Employees',
+
+            data:[30,45,80,60,20],
+
+            backgroundColor:'#7dff8c'
+
+        }]
+    }
+
+});
+
+new Chart(document.getElementById('salaryChart'), {
+
+    type:'pie',
+
+    data:{
+        labels:[
+            '50k',
+            '100k',
+            '200k',
+            '300k',
+            '500k'
+        ],
+
+        datasets:[{
+
+            data:[20,35,25,15,5],
+
+            backgroundColor:[
+                '#00ff88',
+                '#ff4d4d',
+                '#ffaa00',
+                '#00ccff',
+                '#ff66ff'
+            ]
+
+        }]
+    }
+
+});
+
+</script>
+
+</body>
+</html>

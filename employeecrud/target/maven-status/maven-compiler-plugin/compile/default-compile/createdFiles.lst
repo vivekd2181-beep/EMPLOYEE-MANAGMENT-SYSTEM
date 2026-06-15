@@ -1,0 +1,5 @@
+com\example\employeecrud\EmployeecrudApplication.class
+com\example\employeecrud\entity\Employee.class
+com\example\employeecrud\service\EmployeeService.class
+com\example\employeecrud\controller\EmployeeController.class
+com\example\employeecrud\repository\EmployeeRepository.class

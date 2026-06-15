@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EmployeeSphere</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND GLOW -->
+
+    <div class="bg-glow glow1"></div>
+    <div class="bg-glow glow2"></div>
+    <div class="bg-glow glow3"></div>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Employee<span>Sphere</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#employeeForm">Employees</a></li>
+            <li><a href="#records">Records</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+        <button class="nav-btn">
+            Get Started
+        </button>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero-section">
+
+        <!-- LEFT -->
+
+        <div class="hero-left">
+
+            <div class="tag">
+                Enterprise Workforce Platform
+            </div>
+
+            <h1>
+                Elevate Your <br>
+                Workforce
+            </h1>
+
+            <p>
+                Professional employee management platform designed
+                for modern organizations with streamlined operations,
+                workforce tracking and smart analytics.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="add.html">
+
+                <button class="primary-btn">
+                    Add Employee
+                </button>
+                </a>
+
+                    <a href="records.html">
+                <button class="secondary-btn">
+                    View Records
+                </button>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-right">
+
+            <div class="dashboard-card">
+
+                <div class="card-dots">
+
+                    <span class="red"></span>
+                    <span class="yellow"></span>
+                    <span class="green"></span>
+
+                </div>
+
+                <h2>Workforce Overview</h2>
+
+                <div class="overview-box">
+
+    <div class="mini-card clickable-card"
+    onclick="window.location.href='records.html'">
+
+        <h4>Total Employees</h4>
+        <h1>250+</h1>
+
+    </div>
+
+    <div class="mini-card clickable-card"
+    onclick="window.location.href='analytics.html'">
+
+        <h4>Departments</h4>
+        <h1>12</h1>
+
+    </div>
+
+    <div class="mini-card clickable-card"
+    onclick="window.location.href='analytics.html'">
+
+        <h4>Performance</h4>
+        <h1>98%</h1>
+
+    </div>
+
+    <div class="mini-card clickable-card"
+    onclick="window.location.href='analytics.html'">
+
+        <h4>Monthly Growth</h4>
+        <h1>+24%</h1>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EMPLOYEE FORM -->
+
+    <!-- <section class="employee-form-section"
+             id="employeeForm">
+
+        <h1 class="section-title">
+            Add Employee
+        </h1>
+
+        <div class="employee-form">
+
+            <input type="text"
+                   id="name"
+                   placeholder="Employee Name">
+
+            <input type="text"
+                   id="department"
+                   placeholder="Department">
+
+            <input type="number"
+                   id="salary"
+                   placeholder="Salary">
+
+            <input type="text"
+                   id="designation"
+                   placeholder="Designation">
+
+            <!-- <button class="primary-btn"
+                    onclick="addEmployee()">
+
+                Add Employee
+
+            </button> -->
+            <!-- <div class="hero-buttons">
+
+    <a href="add.html">
+        <button class="hero-btn">
+            Add Employee
+        </button>
+    </a>
+
+    <a href="records.html">
+        <button class="hero-btn secondary-btn">
+            View Records
+        </button>
+    </a>
+
+</div>
+
+        </div>
+
+    </section> -->
+
+    <!-- RECORDS -->
+
+    <!-- <section class="records-section"
+             id="records">
+
+        <h1 class="section-title">
+            Employee Records
+        </h1>
+
+        <div class="table-container">
+
+           ame</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Designation</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="employeeTable">
+
+                </tbody> <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>N
+
+            </table>
+
+        </div>
+
+    </section> --> 
+
+    <!-- FEATURES -->
+
+    <section class="features-section">
+
+        <div class="feature-card">
+
+            <h2>Employee Tracking</h2>
+
+            <p>
+                Efficiently manage employee details,
+                departments and salary records.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h2>Modern Dashboard</h2>
+
+            <p>
+                Responsive interface with premium
+                glassmorphism UI and smooth animations.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <h2>Smart Analytics</h2>
+
+            <p>
+                Track workforce growth and organization
+                performance instantly.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        © 2026 EmployeeSphere • Premium Workforce Platform
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#050505;
+            overflow:hidden;
+            position:relative;
+            color:white;
+        }
+
+        /* BACKGROUND GLOW */
+
+        body::before{
+            content:"";
+            position:absolute;
+            width:700px;
+            height:700px;
+            background:radial-gradient(circle,
+            rgba(255,70,70,0.35) 0%,
+            rgba(255,0,80,0.15) 35%,
+            transparent 70%);
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            filter:blur(70px);
+            z-index:0;
+        }
+
+        /* CONTAINER */
+
+        .container{
+            width:450px;
+            padding:45px;
+            border-radius:28px;
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter:blur(20px);
+            z-index:2;
+            box-shadow:0 0 40px rgba(255,0,70,0.15);
+        }
+
+        h1{
+            text-align:center;
+            font-size:52px;
+            margin-bottom:12px;
+            font-weight:800;
+        }
+
+        .subtitle{
+            text-align:center;
+            color:#cfcfcf;
+            margin-bottom:35px;
+            line-height:1.7;
+        }
+
+        form{
+            display:flex;
+            flex-direction:column;
+            gap:22px;
+        }
+
+        input,
+        select{
+            width:100%;
+            padding:18px 20px;
+            border:none;
+            outline:none;
+            border-radius:16px;
+            background:rgba(255,255,255,0.08);
+            color:white;
+            font-size:16px;
+            backdrop-filter:blur(10px);
+        }
+
+        input::placeholder{
+            color:#d4d4d4;
+        }
+
+        select{
+            appearance:none;
+            cursor:pointer;
+        }
+
+        select option{
+            background:#111;
+            color:white;
+        }
+
+        .submit-btn{
+            margin-top:10px;
+            padding:18px;
+            border:none;
+            border-radius:18px;
+            background:linear-gradient(135deg,#ff512f,#ff0844);
+            color:white;
+            font-size:18px;
+            font-weight:600;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .submit-btn:hover{
+            transform:translateY(-4px);
+            box-shadow:0 0 25px rgba(255,70,70,0.4);
+        }
+
+        .back-btn{
+            position:absolute;
+            top:30px;
+            left:30px;
+            text-decoration:none;
+            color:white;
+            background:rgba(255,255,255,0.08);
+            padding:12px 20px;
+            border-radius:14px;
+            backdrop-filter:blur(10px);
+            transition:0.3s;
+        }
+
+        .back-btn:hover{
+            background:rgba(255,255,255,0.15);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-btn">← Back</a>
+
+    <div class="container">
+
+        <h1>Add Employee</h1>
+
+        <p class="subtitle">
+            Create employee records with modern workforce management.
+        </p>
+
+        <form id="employeeForm">
+
+            <input type="text"
+                   id="name"
+                   placeholder="Employee Name"
+                   required>
+
+            <!-- Department Dropdown -->
+
+            <select id="department" required>
+
+                <option value="">Select Department</option>
+
+                <option>HR</option>
+
+                <option>Developer</option>
+
+                <option>Testing</option>
+
+                <option>UI/UX</option>
+
+                <option>Marketing</option>
+
+                <option>Finance</option>
+
+                <option>Management</option>
+
+                <option>Fronted</option>
+
+                <option>SQL dev</option>
+
+                <option>DevOps</option>
+
+                <option>Data Analyst</option>
+
+                <option>Data scientist</option>
+
+            </select>
+
+            <!-- Salary Dropdown -->
+
+            <select id="salary" required>
+
+                <option value="">Select Salary</option>
+
+                <option>10000</option>
+                <option>20000</option>
+                <option>30000</option>
+                <option>40000</option>
+                <option>50000</option>
+                <option>60000</option>
+                <option>70000</option>
+                <option>80000</option>
+                <option>90000</option>
+                <option>100000</option>
+                <option>200000</option>
+                <option>300000</option>
+                <option>400000</option>
+                <option>500000</option>
+
+            </select>
+
+            <input type="text"
+                   id="designation"
+                   placeholder="Designation"
+                   required>
+
+            <button type="submit" class="submit-btn">
+                Add Employee
+            </button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        document.getElementById("employeeForm")
+        .addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            const employee = {
+
+                name: document.getElementById("name").value,
+
+                department: document.getElementById("department").value,
+
+                salary: document.getElementById("salary").value,
+
+                designation: document.getElementById("designation").value
+            };
+
+            fetch("http://localhost:9090/employees",{
+
+                method:"POST",
+
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify(employee)
+
+            })
+
+            .then(response => response.json())
+
+            .then(data => {
+
+                alert("Employee Added Successfully!");
+
+                window.location.href = "records.html";
+
+            })
+
+            .catch(error => {
+
+                console.log(error);
+
+                alert("Error adding employee");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
