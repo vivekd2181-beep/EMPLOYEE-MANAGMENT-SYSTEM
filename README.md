@@ -145,12 +145,14 @@ http://localhost:8080
 
 
 ### Employee List
-<img width="1920" height="1030" alt="Firefox 18-05-2026 13_54_28" src="https://github.com/user-attachments/assets/cf94c3d4-9f18-45c7-8160-04fc18b6ac5d" />
-![Uploading EmployeeSphere - Google Chrome 08-05-2026 11_15_25.png…]()
+<img width="1920" height="1030" alt="EmployeeSphere - Google Chrome 08-05-2026 11_15_25" src="https://github.com/user-attachments/assets/8600dc0b-9029-48f8-9475-8c19004057ca" />
 
 
 ### Add Employee
-)<img width="1920" height="1030" alt="EmployeeSphere - Google Chrome 08-05-2026 11_15_25" src="https://github.com/user-attachments/assets/8600dc0b-9029-48f8-9475-8c19004057ca" />![Uploading Firefox 18-05-2026 13_54_28.png…]()
+<img width="1920" height="1030" alt="Firefox 18-05-2026 13_54_28" src="https://github.com/user-attachments/assets/cf94c3d4-9f18-45c7-8160-04fc18b6ac5d" />
+![Uploading EmployeeSphere - Google Chrome 08-05-2026 11_15_25.png…]()
+
+)>![Uploading Firefox 18-05-2026 13_54_28.png…]()
 
 
 ---
