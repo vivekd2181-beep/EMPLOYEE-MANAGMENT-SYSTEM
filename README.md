@@ -1,3 +1,4 @@
+<img width="1920" height="1030" alt="EmployeeSphere - Google Chrome 08-05-2026 11_10_16" src="https://github.com/user-attachments/assets/490b5207-4005-4098-8cda-d2c60eb3ed53" />
 # Employee Management System
 
 A full-stack Employee Management System developed using Java, Spring Boot, Hibernate, MySQL, and Thymeleaf. This application helps organizations efficiently manage employee records, including adding, updating, viewing, and deleting employee information through a user-friendly interface.
@@ -140,13 +141,18 @@ http://localhost:8080
 ## 📸 Screenshots
 
 ### Dashboard
-(Add Screenshot Here)
+(Add Screenshot Here)<img width="1920" height="1030" alt="EmployeeSphere - Google Chrome 08-05-2026 11_15_25" src="https://github.com/user-attachments/assets/8600dc0b-9029-48f8-9475-8c19004057ca" />
+<img width="1920" height="1030" alt="EmployeeSphere - Google Chrome 08-05-2026 11_10_16" src="https://github.com/user-attachments/assets/f142ea2b-e671-40a5-bbe7-d27156bf7c14" />
+
 
 ### Employee List
-(Add Screenshot Here)
+(Add Screenshot Here)<img width="1920" height="1030" alt="Firefox 18-05-2026 13_54_28" src="https://github.com/user-attachments/assets/cf94c3d4-9f18-45c7-8160-04fc18b6ac5d" />
+![Uploading EmployeeSphere - Google Chrome 08-05-2026 11_15_25.png…]()
+
 
 ### Add Employee
-(Add Screenshot Here)
+(Add Screenshot Here)![Uploading Firefox 18-05-2026 13_54_28.png…]()
+
 
 ---
 
